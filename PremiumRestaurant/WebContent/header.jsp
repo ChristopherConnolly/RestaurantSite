@@ -1,3 +1,4 @@
+<%-- This is the reusable header element --%>
 
 <header>
 	<h1>
