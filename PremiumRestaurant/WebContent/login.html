@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>Premium Restaurant</title>
+        <link rel="stylesheet" href="restaurantstyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes" rel="stylesheet">
+    </head>	
+    <body>
+        <header>
+            <h1><a id="header_title" href="index.html">Welcome to Premium Restaurant</a></h1>
+            <a id="admin_login" href="login.html">Admin login</a>
+            <img id="logo_img" src="img/restaurant_logo.png" alt="PremiumRestaurant logo">
+            <nav>
+                <div id="nav_div1">
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="booking.html">Book the table</a>
+                    <a href="contacts.html">Contact us</a>		
+                </div>					
+            </nav>				
+        </header>
+        <main>
+
+            <br><br>
+            <div id="logging">
+                <h1>Admin Login</h1>
+
+                <fieldset>
+
+
+                    <form action="login.jsp" method="get">
+                        <table cellspacing="5" border="0">
+
+                            <tr>
+                                <td align="right"><strong>Name:</strong></td>
+                                <td><input type="text" name="adminname" placeholder="Enter Name" required> <br><br></td>
+                            </tr>
+                            <tr>
+                                <td align="right"><strong>UserName:</strong></td>
+                                <td><input type="text" name="userName" placeholder="User Name" required> <br><br></td>
+                            </tr>
+                            <tr>
+                                <td align="right"><strong>Password:</strong></td>
+                                <td><input type="password" name="password" placeholder="Password" required> <br><br></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><br><input type="submit" value="Submit"></td>
+                            </tr>
+                        </table>
+                    </form>
+
+                </fieldset> 
+            </div>
+            <br><br><br>
+            <br>
+        </main>
+        <footer>
+            <hr color="#0099FF" align=center >
+            <p align=center>"Premium Restaurant" Athlone 2016 </p>
+        </footer>
+    </body>
+</html>

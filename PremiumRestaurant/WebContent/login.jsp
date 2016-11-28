@@ -1,37 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>Premium Restaurant</title>
-<link rel="stylesheet" href="restaurantstyle.css">
-<link
-	href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes"
-	rel="stylesheet">
-</head>
-<body>
-	<%@ include file="header.jsp"%>
-	<main>
-	<div id="main_div1"></div>
-	<div id="main_div2">
-		<div id="main_div2_1">
-			<article>
-				<p>Premium Restaurant is Athlone's top dining location. We boast
-					a wide variety of ethnic foods and drinks.</p>
-				<p>On this site you can see today's specials, view the menu,
-					book a table or see a map directing you to our establishment.</p>
-			</article>
-		</div>
-		<div id="main_div2_2">
-			<article>
-				<p>Premium Restaurant is Athlone's top dining location. We boast
-					a wide variety of ethnic foods and drinks.</p>
-				<p>On this site you can see today's specials, view the menu,
-					book a table or see a map directing you to our establishment.</p>
-			</article>
-		</div>
-	</div>
-	</main>
-	<%@ include file="footer.jsp"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="java.lang.*"%>
+<%@ page import="javax.sql.*"%>
+<%@ page language="java"%>
 
-</body>
-</html>
+	<!-- import packages and classes needed by the scripts -->
+	<%@ page import="business.Customer,java.util.ArrayList,java.lang.Integer" %>
+
+	<%
+	// get parameters from the request
+        String adminname = request.getParameter("adminname");
+        String userName = request.getParameter("userName");
+	String password = request.getParameter("password");
+	
+
+	// use regular Java objects
+	Customer aCustomer = new Customer(userName, password);
+
+	if (aCustomer.getUserName().equals("admin") && aCustomer.getPassword().equals("password")) {
+
+         
+      request.getRequestDispatcher("/admin.jsp").include(request, response);
+
+    }else
+      {
+         
+    request.getRequestDispatcher("/error.jsp").include(request, response);
+
+        }
+	%>
+
+	
